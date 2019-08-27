@@ -26,7 +26,7 @@ resource "ibm_is_vpc_address_prefix" "mas_vpc_address_prefix_3" {
     cidr                  = "10.60.0.0/16"                             //  IP address range prefix for this zone in this VPC
 }
 
-resource "null_resource" "address_prefix_wait" {
+resource "null_resource" "address_prefix_wait" {                       //  Wait until all three sets of IP address prefixes are complete
     depends_on            = ["ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1",
                              "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2",
                              "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3"]

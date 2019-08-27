@@ -1,0 +1,249 @@
+2019/08/27 12:37:19 -----  New Action  -----
+2019/08/27 12:37:19 Request: activityID=0a5d9c7e5d497c9b94da8b5f538b93f9, account=918185b8223c287fc7f5ca517d94c0f1, owner=shallcrm@sg.ibm.com, requestID=97020b0c-a768-4be5-a3d7-946cd41c54ba
+2019/08/27 12:37:19 Related Activity: action=APPLY, workspaceID=shallcrm-schematics-testing-cfe7a468-476e-4f, processedBy=engine-1025-cxpsg
+2019/08/27 12:37:19 Related Workspace: name=shallcrm-schematics-testing, sourcerelease=(not specified), sourceurl=
+2019/08/27 12:37:19 workspace.template.StateFile: ffb51410-51a8-4841-b944-dbc22631e91d
+
+2019/08/27 12:37:20 -----  Terraform INIT  -----
+2019/08/27 12:37:20 Starting command: terraform init -input=false -no-color
+2019/08/27 12:37:20 Terraform init | 
+2019/08/27 12:37:20 Terraform init | Initializing provider plugins...
+2019/08/27 12:37:21 Terraform init | 
+2019/08/27 12:37:21 Terraform init | The following providers do not have any version constraints in configuration,
+2019/08/27 12:37:21 Terraform init | so the latest version was installed.
+2019/08/27 12:37:21 Terraform init | 
+2019/08/27 12:37:21 Terraform init | To prevent automatic upgrades to new major versions that may contain breaking
+2019/08/27 12:37:21 Terraform init | changes, it is recommended to add version = "..." constraints to the
+2019/08/27 12:37:21 Terraform init | corresponding provider blocks in configuration, with the constraint strings
+2019/08/27 12:37:21 Terraform init | suggested below.
+2019/08/27 12:37:21 Terraform init | 
+2019/08/27 12:37:21 Terraform init | * provider.null: version = "~> 2.1"
+2019/08/27 12:37:21 Terraform init | 
+2019/08/27 12:37:21 Terraform init | Terraform has been successfully initialized!
+2019/08/27 12:37:21 Command finished successfully.
+
+2019/08/27 12:37:21 -----  Terraform SHOW  -----
+2019/08/27 12:37:21 Starting command: terraform show -no-color
+2019/08/27 12:37:21 Terraform show | 
+2019/08/27 12:37:21 Command finished successfully.
+
+2019/08/27 12:37:21 -----  Terraform APPLY  -----
+2019/08/27 12:37:21 Starting command: terraform apply -state=terraform.tfstate -var-file=schematics.tfvars -auto-approve -no-color
+2019/08/27 12:37:27 Terraform apply | data.ibm_is_ssh_key.vpc_mas_key_1: Refreshing state...
+2019/08/27 12:37:27 Terraform apply | data.ibm_compute_ssh_key.classic_mas_key_1: Refreshing state...
+2019/08/27 12:37:27 Terraform apply | data.ibm_is_ssh_key.vpc_mas_key_2: Refreshing state...
+2019/08/27 12:37:27 Terraform apply | data.ibm_is_image.vpc_vm_image: Refreshing state...
+2019/08/27 12:37:39 Terraform apply | ibm_is_vpc.mas_vpc: Creating...
+2019/08/27 12:37:39 Terraform apply |   classic_access:         "" => "false"
+2019/08/27 12:37:39 Terraform apply |   default_network_acl:    "" => "<computed>"
+2019/08/27 12:37:39 Terraform apply |   default_security_group: "" => "<computed>"
+2019/08/27 12:37:39 Terraform apply |   is_default:             "" => "false"
+2019/08/27 12:37:39 Terraform apply |   name:                   "" => "shallcrm-sydney-vpc"
+2019/08/27 12:37:39 Terraform apply |   resource_group:         "" => "7abe241cfa3a421e9ae4d086e8660eb9"
+2019/08/27 12:37:39 Terraform apply |   status:                 "" => "<computed>"
+2019/08/27 12:37:49 Terraform apply | ibm_is_vpc.mas_vpc: Still creating... (10s elapsed)
+2019/08/27 12:37:59 Terraform apply | ibm_is_vpc.mas_vpc: Still creating... (20s elapsed)
+2019/08/27 12:37:59 Terraform apply | ibm_is_vpc.mas_vpc: Creation complete after 20s (ID: f1c68045-4c0d-4655-8c8f-941c140a5d1f)
+2019/08/27 12:38:00 Terraform apply | ibm_is_security_group_rule.mas_security_group_rule_ping: Creating...
+2019/08/27 12:38:00 Terraform apply |   direction:   "" => "ingress"
+2019/08/27 12:38:00 Terraform apply |   group:       "" => "2d364f0a-a870-42c3-a554-000001913392"
+2019/08/27 12:38:00 Terraform apply |   icmp.#:      "" => "1"
+2019/08/27 12:38:00 Terraform apply |   icmp.0.type: "" => "8"
+2019/08/27 12:38:00 Terraform apply |   ip_version:  "" => "ipv4"
+2019/08/27 12:38:00 Terraform apply |   remote:      "" => "0.0.0.0/0"
+2019/08/27 12:38:00 Terraform apply |   rule_id:     "" => "<computed>"
+2019/08/27 12:38:00 Terraform apply | ibm_is_security_group_rule.mas_security_group_rule_http: Creating...
+2019/08/27 12:38:00 Terraform apply |   direction:      "" => "ingress"
+2019/08/27 12:38:00 Terraform apply |   group:          "" => "2d364f0a-a870-42c3-a554-000001913392"
+2019/08/27 12:38:00 Terraform apply |   ip_version:     "" => "ipv4"
+2019/08/27 12:38:00 Terraform apply |   remote:         "" => "0.0.0.0/0"
+2019/08/27 12:38:00 Terraform apply |   rule_id:        "" => "<computed>"
+2019/08/27 12:38:00 Terraform apply |   tcp.#:          "" => "1"
+2019/08/27 12:38:00 Terraform apply |   tcp.0.port_max: "" => "80"
+2019/08/27 12:38:00 Terraform apply |   tcp.0.port_min: "" => "80"
+2019/08/27 12:38:00 Terraform apply | ibm_is_security_group_rule.mas_security_group_rule_ssh: Creating...
+2019/08/27 12:38:00 Terraform apply |   direction:      "" => "ingress"
+2019/08/27 12:38:00 Terraform apply |   group:          "" => "2d364f0a-a870-42c3-a554-000001913392"
+2019/08/27 12:38:00 Terraform apply |   ip_version:     "" => "ipv4"
+2019/08/27 12:38:00 Terraform apply |   remote:         "" => "0.0.0.0/0"
+2019/08/27 12:38:00 Terraform apply |   rule_id:        "" => "<computed>"
+2019/08/27 12:38:00 Terraform apply |   tcp.#:          "" => "1"
+2019/08/27 12:38:00 Terraform apply |   tcp.0.port_max: "" => "22"
+2019/08/27 12:38:00 Terraform apply |   tcp.0.port_min: "" => "22"
+2019/08/27 12:38:00 Terraform apply | ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3: Creating...
+2019/08/27 12:38:00 Terraform apply |   cidr:        "" => "10.60.0.0/16"
+2019/08/27 12:38:00 Terraform apply |   has_subnets: "" => "<computed>"
+2019/08/27 12:38:00 Terraform apply |   name:        "" => "shallcrm-au-syd-3-address-prefix"
+2019/08/27 12:38:00 Terraform apply |   vpc:         "" => "f1c68045-4c0d-4655-8c8f-941c140a5d1f"
+2019/08/27 12:38:00 Terraform apply |   zone:        "" => "au-syd-3"
+2019/08/27 12:38:00 Terraform apply | ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1: Creating...
+2019/08/27 12:38:00 Terraform apply |   cidr:        "" => "10.40.0.0/16"
+2019/08/27 12:38:00 Terraform apply |   has_subnets: "" => "<computed>"
+2019/08/27 12:38:00 Terraform apply |   name:        "" => "shallcrm-au-syd-1-address-prefix"
+2019/08/27 12:38:00 Terraform apply |   vpc:         "" => "f1c68045-4c0d-4655-8c8f-941c140a5d1f"
+2019/08/27 12:38:00 Terraform apply |   zone:        "" => "au-syd-1"
+2019/08/27 12:38:00 Terraform apply | ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2: Creating...
+2019/08/27 12:38:00 Terraform apply |   cidr:        "" => "10.50.0.0/16"
+2019/08/27 12:38:00 Terraform apply |   has_subnets: "" => "<computed>"
+2019/08/27 12:38:00 Terraform apply |   name:        "" => "shallcrm-au-syd-2-address-prefix"
+2019/08/27 12:38:00 Terraform apply |   vpc:         "" => "f1c68045-4c0d-4655-8c8f-941c140a5d1f"
+2019/08/27 12:38:00 Terraform apply |   zone:        "" => "au-syd-2"
+2019/08/27 12:38:02 Terraform apply | ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1: Creation complete after 3s (ID: f1c68045-4c0d-4655-8c8f-941c140a5d1f/0cb37cad-64ce-40bf-9a23-d8328d035e71)
+2019/08/27 12:38:03 Terraform apply | ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3: Creation complete after 3s (ID: f1c68045-4c0d-4655-8c8f-941c140a5d1f/d73802af-858c-43ed-be51-2b6b29016e59)
+2019/08/27 12:38:03 Terraform apply | ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2: Creation complete after 3s (ID: f1c68045-4c0d-4655-8c8f-941c140a5d1f/d7084ece-af11-4d6e-8f71-4893dcebb3db)
+2019/08/27 12:38:03 Terraform apply | null_resource.address_prefix_wait: Creating...
+2019/08/27 12:38:03 Terraform apply | null_resource.address_prefix_wait: Provisioning with 'local-exec'...
+2019/08/27 12:38:03 Terraform apply | null_resource.address_prefix_wait (local-exec): Executing: ["/bin/sh" "-c" "sleep 2"]
+2019/08/27 12:38:05 Terraform apply | null_resource.address_prefix_wait: Creation complete after 3s (ID: 4394914473481996891)
+2019/08/27 12:38:05 Terraform apply | ibm_is_subnet.mas_subnet_2: Creating...
+2019/08/27 12:38:05 Terraform apply |   available_ipv4_address_count: "" => "<computed>"
+2019/08/27 12:38:05 Terraform apply |   ip_version:                   "" => "ipv4"
+2019/08/27 12:38:05 Terraform apply |   ipv4_cidr_block:              "" => "10.50.1.0/24"
+2019/08/27 12:38:05 Terraform apply |   ipv6_cidr_block:              "" => "<computed>"
+2019/08/27 12:38:05 Terraform apply |   name:                         "" => "shallcrm-au-syd-2-subnet-1"
+2019/08/27 12:38:05 Terraform apply |   network_acl:                  "" => "<computed>"
+2019/08/27 12:38:05 Terraform apply |   status:                       "" => "<computed>"
+2019/08/27 12:38:05 Terraform apply |   total_ipv4_address_count:     "" => "<computed>"
+2019/08/27 12:38:05 Terraform apply |   vpc:                          "" => "f1c68045-4c0d-4655-8c8f-941c140a5d1f"
+2019/08/27 12:38:05 Terraform apply |   zone:                         "" => "au-syd-2"
+2019/08/27 12:38:05 Terraform apply | ibm_is_subnet.mas_subnet_1: Creating...
+2019/08/27 12:38:05 Terraform apply |   available_ipv4_address_count: "" => "<computed>"
+2019/08/27 12:38:05 Terraform apply |   ip_version:                   "" => "ipv4"
+2019/08/27 12:38:05 Terraform apply |   ipv4_cidr_block:              "" => "10.40.1.0/24"
+2019/08/27 12:38:05 Terraform apply |   ipv6_cidr_block:              "" => "<computed>"
+2019/08/27 12:38:05 Terraform apply |   name:                         "" => "shallcrm-au-syd-1-subnet-1"
+2019/08/27 12:38:05 Terraform apply |   network_acl:                  "" => "<computed>"
+2019/08/27 12:38:05 Terraform apply |   status:                       "" => "<computed>"
+2019/08/27 12:38:05 Terraform apply |   total_ipv4_address_count:     "" => "<computed>"
+2019/08/27 12:38:05 Terraform apply |   vpc:                          "" => "f1c68045-4c0d-4655-8c8f-941c140a5d1f"
+2019/08/27 12:38:05 Terraform apply |   zone:                         "" => "au-syd-1"
+2019/08/27 12:38:05 Terraform apply | ibm_is_security_group_rule.mas_security_group_rule_ping: Creation complete after 6s (ID: 2d364f0a-a870-42c3-a554-000001913392.b597cff2-38e8-4e6e-999d-000005990438)
+2019/08/27 12:38:06 Terraform apply | ibm_is_security_group_rule.mas_security_group_rule_ssh: Creation complete after 7s (ID: 2d364f0a-a870-42c3-a554-000001913392.b597cff2-38e8-4e6e-999d-000005990500)
+2019/08/27 12:38:09 Terraform apply | ibm_is_security_group_rule.mas_security_group_rule_http: Creation complete after 10s (ID: 2d364f0a-a870-42c3-a554-000001913392.b597cff2-38e8-4e6e-999d-000005990660)
+2019/08/27 12:38:15 Terraform apply | ibm_is_subnet.mas_subnet_2: Still creating... (10s elapsed)
+2019/08/27 12:38:15 Terraform apply | ibm_is_subnet.mas_subnet_1: Still creating... (10s elapsed)
+2019/08/27 12:38:18 Terraform apply | ibm_is_subnet.mas_subnet_2: Creation complete after 13s (ID: 982c89b3-78a7-484c-896f-b39783ed58c2)
+2019/08/27 12:38:25 Terraform apply | ibm_is_subnet.mas_subnet_1: Still creating... (20s elapsed)
+2019/08/27 12:38:29 Terraform apply | ibm_is_subnet.mas_subnet_1: Creation complete after 23s (ID: dbaae853-0de9-4882-9e00-33257f770c18)
+2019/08/27 12:38:29 Terraform apply | 
+2019/08/27 12:38:29 Terraform apply | Apply complete! Resources: 10 added, 0 changed, 0 destroyed.
+2019/08/27 12:38:29 Command finished successfully.
+
+2019/08/27 12:38:29 -----  Terraform SHOW  -----
+2019/08/27 12:38:29 Starting command: terraform show -no-color
+2019/08/27 12:38:29 Terraform show | data.ibm_compute_ssh_key.classic_mas_key_1:
+2019/08/27 12:38:29 Terraform show |   id = 1326131
+2019/08/27 12:38:29 Terraform show |   fingerprint = 1f:c2:15:a3:ed:43:8c:9f:ac:30:af:e0:8f:91:90:6a
+2019/08/27 12:38:29 Terraform show |   label = Michael Shallcross SSH Key 1
+2019/08/27 12:38:29 Terraform show |   most_recent = false
+2019/08/27 12:38:29 Terraform show |   notes = Michael Shallcross - IBM Cloud SSH Key 1
+2019/08/27 12:38:29 Terraform show |   public_key = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDGP0kABb0w+1siZh7qIxMTTr19mqtN41HBVNBqVCl4pClSuM54YEPSnPH8EAgeOhKKYjhK50C34pYBYaJxmu1oN8NZxGZXOLSD4wvbXHdeGhWaBzpBiOIuT/2iA1wJa4hAgLhWWVNHpb9oe5iC8bNXdkQim9HIRYqA4G/nifGCey+06+EoF+sZv4whbMfAObsusJNM74Eg1RASRJnINTtlIubUpWDN4tpJQEfMkmyAuXjK/RLg9HePp2selD5y4eG99HjAiBj/Sxv7oLHRRd+joKeok2Z+m07jKM9DkI/2gJjwuAsW+qhnSsZGuH76HQIb5WW5HKGKbOLLKtLMnSfOc2HHJtm8xA30iSOZmpyTKz0xXvLU7r0Lr15IouviW89IrWYJxMXyPXHysdcgZXLM8UdMx0otqUUj3H4aanRnJ+vJtDwfCTWknkj8JqTAssGw2K972sg8EEWjWmsSGiGl6W6fvd3OMV9ruTEINZeIak7Gg7+G2HUPGdS1K2yUNjmCZfAIJlWsZ1wlzfUi1vmQdyYPFTF625TEUiDYo0bQF3KSNH9oxfNwiJXvaOPwvP5FDfAF8grd2oERzkMnu3vcvQRHRbzYFDbJVuLcgejD0ot8G7X60oICkCgF411kPxCk7ZaqTUB48IkXB+0JWkaiNfYczlQ7DiVF6IPdB1o+Ww== m.a.shallcross@gmail.com
+2019/08/27 12:38:29 Terraform show | data.ibm_is_image.vpc_vm_image:
+2019/08/27 12:38:29 Terraform show |   id = cfdaf1a0-5350-4350-fcbc-97173b510843
+2019/08/27 12:38:29 Terraform show |   architecture = amd64
+2019/08/27 12:38:29 Terraform show |   crn = crn:v1:bluemix:public:is:au-syd:::image:cfdaf1a0-5350-4350-fcbc-97173b510843
+2019/08/27 12:38:29 Terraform show |   name = ubuntu-18.04-amd64
+2019/08/27 12:38:29 Terraform show |   os = ubuntu-18-04-amd64
+2019/08/27 12:38:29 Terraform show |   status = available
+2019/08/27 12:38:29 Terraform show |   visibility = public
+2019/08/27 12:38:29 Terraform show | data.ibm_is_ssh_key.vpc_mas_key_1:
+2019/08/27 12:38:29 Terraform show |   id = 636f6d70-0000-0001-0000-0000001651dd
+2019/08/27 12:38:29 Terraform show |   fingerprint = SHA256:XPoRf1HkX7vaauJYJvSjRG2mDRjHAouDEZ6Dpj4w8hY
+2019/08/27 12:38:29 Terraform show |   length = 4096
+2019/08/27 12:38:29 Terraform show |   name = shallcrm-ibmcloud-pwless-ssh-key
+2019/08/27 12:38:29 Terraform show |   type = rsa
+2019/08/27 12:38:29 Terraform show | data.ibm_is_ssh_key.vpc_mas_key_2:
+2019/08/27 12:38:29 Terraform show |   id = 636f6d70-0000-0001-0000-0000001651df
+2019/08/27 12:38:29 Terraform show |   fingerprint = SHA256:Rbsh0KlGNg64P7bejynRJWRFHUM9kQi9ntimvCDuFTA
+2019/08/27 12:38:29 Terraform show |   length = 4096
+2019/08/27 12:38:29 Terraform show |   name = shallcrm-ibmcloud-ssh-key
+2019/08/27 12:38:29 Terraform show |   type = rsa
+2019/08/27 12:38:29 Terraform show | ibm_is_security_group_rule.mas_security_group_rule_http:
+2019/08/27 12:38:29 Terraform show |   id = 2d364f0a-a870-42c3-a554-000001913392.b597cff2-38e8-4e6e-999d-000005990660
+2019/08/27 12:38:29 Terraform show |   direction = ingress
+2019/08/27 12:38:29 Terraform show |   group = 2d364f0a-a870-42c3-a554-000001913392
+2019/08/27 12:38:29 Terraform show |   ip_version = ipv4
+2019/08/27 12:38:29 Terraform show |   remote = 0.0.0.0/0
+2019/08/27 12:38:29 Terraform show |   rule_id = b597cff2-38e8-4e6e-999d-000005990660
+2019/08/27 12:38:29 Terraform show |   tcp.# = 1
+2019/08/27 12:38:29 Terraform show |   tcp.0.port_max = 80
+2019/08/27 12:38:29 Terraform show |   tcp.0.port_min = 80
+2019/08/27 12:38:29 Terraform show | ibm_is_security_group_rule.mas_security_group_rule_ping:
+2019/08/27 12:38:29 Terraform show |   id = 2d364f0a-a870-42c3-a554-000001913392.b597cff2-38e8-4e6e-999d-000005990438
+2019/08/27 12:38:29 Terraform show |   direction = ingress
+2019/08/27 12:38:29 Terraform show |   group = 2d364f0a-a870-42c3-a554-000001913392
+2019/08/27 12:38:29 Terraform show |   icmp.# = 1
+2019/08/27 12:38:29 Terraform show |   icmp.0.code = 0
+2019/08/27 12:38:29 Terraform show |   icmp.0.type = 8
+2019/08/27 12:38:29 Terraform show |   ip_version = ipv4
+2019/08/27 12:38:29 Terraform show |   remote = 0.0.0.0/0
+2019/08/27 12:38:29 Terraform show |   rule_id = b597cff2-38e8-4e6e-999d-000005990438
+2019/08/27 12:38:29 Terraform show | ibm_is_security_group_rule.mas_security_group_rule_ssh:
+2019/08/27 12:38:29 Terraform show |   id = 2d364f0a-a870-42c3-a554-000001913392.b597cff2-38e8-4e6e-999d-000005990500
+2019/08/27 12:38:29 Terraform show |   direction = ingress
+2019/08/27 12:38:29 Terraform show |   group = 2d364f0a-a870-42c3-a554-000001913392
+2019/08/27 12:38:29 Terraform show |   ip_version = ipv4
+2019/08/27 12:38:29 Terraform show |   remote = 0.0.0.0/0
+2019/08/27 12:38:29 Terraform show |   rule_id = b597cff2-38e8-4e6e-999d-000005990500
+2019/08/27 12:38:29 Terraform show |   tcp.# = 1
+2019/08/27 12:38:29 Terraform show |   tcp.0.port_max = 22
+2019/08/27 12:38:29 Terraform show |   tcp.0.port_min = 22
+2019/08/27 12:38:29 Terraform show | ibm_is_subnet.mas_subnet_1:
+2019/08/27 12:38:29 Terraform show |   id = dbaae853-0de9-4882-9e00-33257f770c18
+2019/08/27 12:38:29 Terraform show |   ip_version = ipv4
+2019/08/27 12:38:29 Terraform show |   ipv4_cidr_block = 10.40.1.0/24
+2019/08/27 12:38:29 Terraform show |   ipv6_cidr_block = 
+2019/08/27 12:38:29 Terraform show |   name = shallcrm-au-syd-1-subnet-1
+2019/08/27 12:38:29 Terraform show |   network_acl = 94ef7ff6-7fb3-4b08-a586-380ff97abfe5
+2019/08/27 12:38:29 Terraform show |   public_gateway = 
+2019/08/27 12:38:29 Terraform show |   status = available
+2019/08/27 12:38:29 Terraform show |   total_ipv4_address_count = 256
+2019/08/27 12:38:29 Terraform show |   vpc = f1c68045-4c0d-4655-8c8f-941c140a5d1f
+2019/08/27 12:38:29 Terraform show |   zone = au-syd-1
+2019/08/27 12:38:29 Terraform show | ibm_is_subnet.mas_subnet_2:
+2019/08/27 12:38:29 Terraform show |   id = 982c89b3-78a7-484c-896f-b39783ed58c2
+2019/08/27 12:38:29 Terraform show |   ip_version = ipv4
+2019/08/27 12:38:29 Terraform show |   ipv4_cidr_block = 10.50.1.0/24
+2019/08/27 12:38:29 Terraform show |   ipv6_cidr_block = 
+2019/08/27 12:38:29 Terraform show |   name = shallcrm-au-syd-2-subnet-1
+2019/08/27 12:38:29 Terraform show |   network_acl = 94ef7ff6-7fb3-4b08-a586-380ff97abfe5
+2019/08/27 12:38:29 Terraform show |   public_gateway = 
+2019/08/27 12:38:29 Terraform show |   status = available
+2019/08/27 12:38:29 Terraform show |   total_ipv4_address_count = 256
+2019/08/27 12:38:29 Terraform show |   vpc = f1c68045-4c0d-4655-8c8f-941c140a5d1f
+2019/08/27 12:38:29 Terraform show |   zone = au-syd-2
+2019/08/27 12:38:29 Terraform show | ibm_is_vpc.mas_vpc:
+2019/08/27 12:38:29 Terraform show |   id = f1c68045-4c0d-4655-8c8f-941c140a5d1f
+2019/08/27 12:38:29 Terraform show |   classic_access = false
+2019/08/27 12:38:29 Terraform show |   default_network_acl = 94ef7ff6-7fb3-4b08-a586-380ff97abfe5
+2019/08/27 12:38:29 Terraform show |   default_security_group = 2d364f0a-a870-42c3-a554-000001913392
+2019/08/27 12:38:29 Terraform show |   is_default = false
+2019/08/27 12:38:29 Terraform show |   name = shallcrm-sydney-vpc
+2019/08/27 12:38:29 Terraform show |   resource_group = 7abe241cfa3a421e9ae4d086e8660eb9
+2019/08/27 12:38:29 Terraform show |   status = available
+2019/08/27 12:38:29 Terraform show |   tags.# = 0
+2019/08/27 12:38:29 Terraform show | ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1:
+2019/08/27 12:38:29 Terraform show |   id = f1c68045-4c0d-4655-8c8f-941c140a5d1f/0cb37cad-64ce-40bf-9a23-d8328d035e71
+2019/08/27 12:38:29 Terraform show |   cidr = 10.40.0.0/16
+2019/08/27 12:38:29 Terraform show |   has_subnets = false
+2019/08/27 12:38:29 Terraform show |   name = shallcrm-au-syd-1-address-prefix
+2019/08/27 12:38:29 Terraform show |   vpc = f1c68045-4c0d-4655-8c8f-941c140a5d1f
+2019/08/27 12:38:29 Terraform show |   zone = au-syd-1
+2019/08/27 12:38:29 Terraform show | ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2:
+2019/08/27 12:38:29 Terraform show |   id = f1c68045-4c0d-4655-8c8f-941c140a5d1f/d7084ece-af11-4d6e-8f71-4893dcebb3db
+2019/08/27 12:38:29 Terraform show |   cidr = 10.50.0.0/16
+2019/08/27 12:38:29 Terraform show |   has_subnets = false
+2019/08/27 12:38:29 Terraform show |   name = shallcrm-au-syd-2-address-prefix
+2019/08/27 12:38:29 Terraform show |   vpc = f1c68045-4c0d-4655-8c8f-941c140a5d1f
+2019/08/27 12:38:29 Terraform show |   zone = au-syd-2
+2019/08/27 12:38:29 Terraform show | ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3:
+2019/08/27 12:38:29 Terraform show |   id = f1c68045-4c0d-4655-8c8f-941c140a5d1f/d73802af-858c-43ed-be51-2b6b29016e59
+2019/08/27 12:38:29 Terraform show |   cidr = 10.60.0.0/16
+2019/08/27 12:38:29 Terraform show |   has_subnets = false
+2019/08/27 12:38:29 Terraform show |   name = shallcrm-au-syd-3-address-prefix
+2019/08/27 12:38:29 Terraform show |   vpc = f1c68045-4c0d-4655-8c8f-941c140a5d1f
+2019/08/27 12:38:29 Terraform show |   zone = au-syd-3
+2019/08/27 12:38:29 Terraform show | null_resource.address_prefix_wait:
+2019/08/27 12:38:29 Terraform show |   id = 4394914473481996891
+2019/08/27 12:38:29 Terraform show | 
+2019/08/27 12:38:29 Command finished successfully.
