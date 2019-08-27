@@ -1,0 +1,542 @@
+2019/08/26 13:11:30 [INFO] Terraform version: 0.11.14  
+2019/08/26 13:11:31 [INFO] Go runtime version: go1.12.4
+2019/08/26 13:11:31 [INFO] CLI args: []string{"/home/michael/terraform/terraform", "apply"}
+2019/08/26 13:11:31 [DEBUG] Attempting to open CLI config file: /home/michael/.terraformrc
+2019/08/26 13:11:31 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2019/08/26 13:11:31 [INFO] CLI command args: []string{"apply"}
+2019/08/26 13:11:31 [INFO] command: empty terraform config, returning nil
+2019/08/26 13:11:31 [DEBUG] command: no data state file found for backend config
+2019/08/26 13:11:31 [DEBUG] New state was assigned lineage "186345ac-25b8-b4db-97f6-39f990c0256c"
+2019/08/26 13:11:31 [INFO] command: backend initialized: <nil>
+2019/08/26 13:11:31 [DEBUG] checking for provider in "."
+2019/08/26 13:11:31 [DEBUG] checking for provider in "/home/michael/terraform"
+2019/08/26 13:11:31 [DEBUG] checking for provider in ".terraform/plugins/linux_amd64"
+2019/08/26 13:11:31 [DEBUG] checking for provider in "/home/michael/.terraform.d/plugins"
+2019/08/26 13:11:31 [DEBUG] found provider "terraform-provider-ibm_v0.14.1"
+2019/08/26 13:11:31 [DEBUG] found provider "terraform-provider-ibm_v0.15.0"
+2019/08/26 13:11:31 [DEBUG] found provider "terraform-provider-ibm_v0.15.1"
+2019/08/26 13:11:31 [DEBUG] found provider "terraform-provider-ibm_v0.16.0"
+2019/08/26 13:11:31 [DEBUG] found provider "terraform-provider-ibm_v0.17.0"
+2019/08/26 13:11:31 [DEBUG] found provider "terraform-provider-ibm_v0.17.1"
+2019/08/26 13:11:31 [DEBUG] found provider "terraform-provider-ibm_v0.17.2"
+2019/08/26 13:11:31 [DEBUG] found valid plugin: "ibm", "0.15.1", "/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.15.1"
+2019/08/26 13:11:31 [DEBUG] found valid plugin: "ibm", "0.16.0", "/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.16.0"
+2019/08/26 13:11:31 [DEBUG] found valid plugin: "ibm", "0.17.0", "/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.17.0"
+2019/08/26 13:11:31 [DEBUG] found valid plugin: "ibm", "0.17.1", "/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.17.1"
+2019/08/26 13:11:31 [DEBUG] found valid plugin: "ibm", "0.17.2", "/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.17.2"
+2019/08/26 13:11:31 [DEBUG] found valid plugin: "ibm", "0.14.1", "/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.14.1"
+2019/08/26 13:11:31 [DEBUG] found valid plugin: "ibm", "0.15.0", "/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.15.0"
+2019/08/26 13:11:31 [DEBUG] checking for provisioner in "."
+2019/08/26 13:11:31 [DEBUG] checking for provisioner in "/home/michael/terraform"
+2019/08/26 13:11:31 [DEBUG] checking for provisioner in ".terraform/plugins/linux_amd64"
+2019/08/26 13:11:31 [DEBUG] checking for provisioner in "/home/michael/.terraform.d/plugins"
+2019/08/26 13:11:31 [INFO] command: backend <nil> is not enhanced, wrapping in local
+2019/08/26 13:11:31 [INFO] backend/local: starting Apply operation
+2019/08/26 13:11:31 [INFO] terraform: building graph: GraphTypeInput
+2019/08/26 13:11:31 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1
+2019/08/26 13:11:31 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2
+2019/08/26 13:11:31 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3
+2019/08/26 13:11:31 [DEBUG] Resource state not found for "ibm_is_vpc.mas_vpc": ibm_is_vpc.mas_vpc
+2019/08/26 13:11:31 [DEBUG] resource ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 using provider provider.ibm
+2019/08/26 13:11:31 [DEBUG] resource ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 using provider provider.ibm
+2019/08/26 13:11:31 [DEBUG] resource ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 using provider provider.ibm
+2019/08/26 13:11:31 [DEBUG] resource ibm_is_vpc.mas_vpc using provider provider.ibm
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "ibm_is_vpc.mas_vpc" references: [var.vpc_resource_group]
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.sl_api_key" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.vpc_region" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.vpc_resource_group" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "provider.ibm" references: [var.vpc_gen var.vpc_region var.vpc_resource_group var.sl_username var.sl_api_key var.ic_api_key]
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2" references: [ibm_is_vpc.mas_vpc]
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3" references: [ibm_is_vpc.mas_vpc]
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.ic_api_key" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.vpc_gen" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.vpc_vm_image" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1" references: [ibm_is_vpc.mas_vpc]
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.sl_username" references: []
+ootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+iable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodeAbstractResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodeAbstractResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+var.ic_api_key - *terraform.NodeRootVariable
+var.sl_api_key - *terraform.NodeRootVariable
+var.sl_username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodeAbstractResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodeAbstractResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+var.ic_api_key - *terraform.NodeRootVariable
+var.sl_api_key - *terraform.NodeRootVariable
+var.sl_username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+prefix.mas_vpc_address_prefix_1 - *terraform.NodeAbstractResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodeAbstractResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodeAbstractResource
+  provider.ibm - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.ibm (close) - *terraform.graphNodeCloseProvider
+var.ic_api_key - *terraform.NodeRootVariable
+var.sl_api_key - *terraform.NodeRootVariable
+var.sl_username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+esource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+2019/08/26 13:11:31 [DEBUG] Starting graph walk: walkInput
+2019-08-26T13:11:31.445+0800 [DEBUG] plugin: starting plugin: path=/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.17.2 args=[/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.17.2]
+2019-08-26T13:11:31.456+0800 [DEBUG] plugin: waiting for RPC address: path=/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.17.2
+2019-08-26T13:11:31.631+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 13:11:31 IBM Cloud Provider version 0.17.2
+2019-08-26T13:11:31.639+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: plugin address: timestamp=2019-08-26T13:11:31.639+0800 address=/tmp/plugin094293216 network=unix
+2019/08/26 13:11:31 [INFO] terraform: building graph: GraphTypeValidate
+2019/08/26 13:11:31 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1
+2019/08/26 13:11:31 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2
+2019/08/26 13:11:31 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3
+2019/08/26 13:11:31 [DEBUG] Resource state not found for "ibm_is_vpc.mas_vpc": ibm_is_vpc.mas_vpc
+2019/08/26 13:11:31 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodeValidatableResource
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodeValidatableResource
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodeValidatableResource
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodeValidatableResource
+2019/08/26 13:11:31 [DEBUG] resource ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 using provider provider.ibm
+2019/08/26 13:11:31 [DEBUG] resource ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 using provider provider.ibm
+2019/08/26 13:11:31 [DEBUG] resource ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 using provider provider.ibm
+2019/08/26 13:11:31 [DEBUG] resource ibm_is_vpc.mas_vpc using provider provider.ibm
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.sl_api_key" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.vpc_gen" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.vpc_resource_group" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.vpc_vm_image" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1" references: [ibm_is_vpc.mas_vpc]
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3" references: [ibm_is_vpc.mas_vpc]
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "ibm_is_vpc.mas_vpc" references: [var.vpc_resource_group]
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.vpc_region" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "provider.ibm" references: [var.ic_api_key var.vpc_gen var.vpc_region var.vpc_resource_group var.sl_username var.sl_api_key]
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2" references: [ibm_is_vpc.mas_vpc]
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.sl_username" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.ic_api_key" references: []
+ar.sl_username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+NodeValidatableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodeValidatableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodeValidatableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+var.ic_api_key - *terraform.NodeRootVariable
+var.sl_api_key - *terraform.NodeRootVariable
+var.sl_username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+rm.NodeValidatableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodeValidatableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodeValidatableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+var.ic_api_key - *terraform.NodeRootVariable
+var.sl_api_key - *terraform.NodeRootVariable
+var.sl_username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+atableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodeValidatableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodeValidatableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.ibm (close) - *terraform.graphNodeCloseProvider
+var.ic_api_key - *terraform.NodeRootVariable
+var.sl_api_key - *terraform.NodeRootVariable
+var.sl_username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+- *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+2019/08/26 13:11:31 [DEBUG] Starting graph walk: walkValidate
+2019/08/26 13:11:31 [DEBUG] Resource state not found for "ibm_is_vpc.mas_vpc": ibm_is_vpc.mas_vpc
+2019/08/26 13:11:31 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodeValidatableResourceInstance
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "ibm_is_vpc.mas_vpc" references: []
+2019/08/26 13:11:31 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodeValidatableResourceInstance
+2019/08/26 13:11:31 [TRACE] Graph after step *terraform.RootTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodeValidatableResourceInstance
+2019/08/26 13:11:31 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3
+2019/08/26 13:11:31 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodeValidatableResourceInstance
+2019/08/26 13:11:31 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodeValidatableResourceInstance
+2019/08/26 13:11:31 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1
+2019/08/26 13:11:31 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodeValidatableResourceInstance
+2019/08/26 13:11:31 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodeValidatableResourceInstance
+2019/08/26 13:11:31 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1" references: []
+2019/08/26 13:11:31 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2
+2019/08/26 13:11:31 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodeValidatableResourceInstance
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2" references: []
+2019/08/26 13:11:31 [INFO] backend/local: apply calling Refresh
+2019/08/26 13:11:31 [INFO] terraform: building graph: GraphTypeRefresh
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.vpc_vm_image" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.sl_username" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.sl_api_key" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.ic_api_key" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.vpc_region" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.vpc_gen" references: []
+2019/08/26 13:11:31 [DEBUG] Starting graph walk: walkRefresh
+2019/08/26 13:11:31 [INFO] terraform: building graph: GraphTypePlan
+2019/08/26 13:11:31 [TRACE] ConfigTransformer: Starting for path: []
+2019/08/26 13:11:31 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodePlannableResource
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodePlannableResource
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodePlannableResource
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodePlannableResource
+2019/08/26 13:11:31 [TRACE] Graph after step *terraform.LocalTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodePlannableResource
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodePlannableResource
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodePlannableResource
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodePlannableResource
+2019/08/26 13:11:31 [TRACE] Graph after step *terraform.OutputTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodePlannableResource
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodePlannableResource
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodePlannableResource
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodePlannableResource
+2019/08/26 13:11:31 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3
+2019/08/26 13:11:31 [DEBUG] Resource state not found for "ibm_is_vpc.mas_vpc": ibm_is_vpc.mas_vpc
+2019/08/26 13:11:31 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1
+2019/08/26 13:11:31 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2
+2019/08/26 13:11:31 [DEBUG] resource ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 using provider provider.ibm
+2019/08/26 13:11:31 [DEBUG] resource ibm_is_vpc.mas_vpc using provider provider.ibm
+2019/08/26 13:11:31 [DEBUG] resource ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 using provider provider.ibm
+2019/08/26 13:11:31 [DEBUG] resource ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 using provider provider.ibm
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.sl_username" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.sl_api_key" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.vpc_resource_group" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "provider.ibm" references: [var.vpc_resource_group var.sl_username var.sl_api_key var.ic_api_key var.vpc_gen var.vpc_region]
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1" references: [ibm_is_vpc.mas_vpc]
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3" references: [ibm_is_vpc.mas_vpc]
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.ic_api_key" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.vpc_region" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.vpc_gen" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "var.vpc_vm_image" references: []
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2" references: [ibm_is_vpc.mas_vpc]
+2019/08/26 13:11:31 [DEBUG] ReferenceTransformer: "ibm_is_vpc.mas_vpc" references: [var.vpc_resource_group]
+aform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodePlannableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodePlannableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodePlannableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+var.ic_api_key - *terraform.NodeRootVariable
+var.sl_api_key - *terraform.NodeRootVariable
+var.sl_username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+ce
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodePlannableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodePlannableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodePlannableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+var.ic_api_key - *terraform.NodeRootVariable
+var.sl_api_key - *terraform.NodeRootVariable
+var.sl_username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodePlannableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodePlannableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodePlannableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.ibm (close) - *terraform.graphNodeCloseProvider
+var.ic_api_key - *terraform.NodeRootVariable
+var.sl_api_key - *terraform.NodeRootVariable
+var.sl_username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+ble
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+2019/08/26 13:11:31 [DEBUG] Starting graph walk: walkPlan
+2019-08-26T13:11:31.768+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 13:11:31 Configuring SoftLayer Session with API key
+2019-08-26T13:11:31.768+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 13:11:31 Configuring IBM Cloud Session with API key
+2019/08/26 13:11:43 [DEBUG] Resource state not found for "ibm_is_vpc.mas_vpc": ibm_is_vpc.mas_vpc
+2019/08/26 13:11:43 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodePlannableResourceInstance
+2019/08/26 13:11:43 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodePlannableResourceInstance
+2019/08/26 13:11:43 [DEBUG] ReferenceTransformer: "ibm_is_vpc.mas_vpc" references: []
+2019/08/26 13:11:43 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodePlannableResourceInstance
+2019/08/26 13:11:43 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1
+2019/08/26 13:11:43 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2" references: []
+2019/08/26 13:11:43 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodePlannableResourceInstance
+2019/08/26 13:11:43 [TRACE] Graph after step *terraform.RootTransformer:
+
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodePlannableResourceInstance
+2019/08/26 13:11:43 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1" references: []
+2019/08/26 13:11:43 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3
+2019/08/26 13:11:43 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3" references: []
+
+An execution plan has been generated and is shown below.
+2019/08/26 13:11:43 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+Resource actions are indicated with the following symbols:
+  [32m+[0m create
+[0m
+Terraform will perform the following actions:
+
+[32m  [32m+[0m [32mibm_is_vpc.mas_vpc
+[0m      id:                     <computed>
+      classic_access:         "false"
+      default_network_acl:    <computed>
+      default_security_group: <computed>
+      is_default:             "false"
+      name:                   "shallcrm-sydney-vpc"
+      resource_group:         "7abe241cfa3a421e9ae4d086e8660eb9"
+      status:                 <computed>
+[0m
+[0m[32m  [32m+[0m [32mibm_is_vpc_address_prefix.mas_vpc_address_prefix_1
+[0m      id:                     <computed>
+      cidr:                   "10.40.0.0/16"
+      has_subnets:            <computed>
+      name:                   "shallcrm-au-syd-1-address-prefix"
+      vpc:                    "${ibm_is_vpc.mas_vpc.id}"
+      zone:                   "au-syd-1"
+[0m
+[0m[32m  [32m+[0m [32mibm_is_vpc_address_prefix.mas_vpc_address_prefix_2
+[0m      id:                     <computed>
+      cidr:                   "10.50.0.0/16"
+      has_subnets:            <computed>
+      name:                   "shallcrm-au-syd-2-address-prefix"
+      vpc:                    "${ibm_is_vpc.mas_vpc.id}"
+      zone:                   "au-syd-2"
+[0m
+[0m[32m  [32m+[0m [32mibm_is_vpc_address_prefix.mas_vpc_address_prefix_3
+[0m      id:                     <computed>
+      cidr:                   "10.60.0.0/16"
+      has_subnets:            <computed>
+      name:                   "shallcrm-au-syd-3-address-prefix"
+      vpc:                    "${ibm_is_vpc.mas_vpc.id}"
+      zone:                   "au-syd-3"
+[0m
+[0m
+[0m[1mPlan:[0m 4 to add, 0 to change, 0 to destroy.[0m
+
+[0m[1mDo you want to perform these actions?[0m
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  [1mEnter a value:[0m [0m
+2019/08/26 13:11:46 [INFO] terraform: building graph: GraphTypeApply
+2019/08/26 13:11:46 [TRACE] DiffTransformer: starting
+2019/08/26 13:11:46 [TRACE] DiffTransformer: Module: CREATE: ibm_is_vpc.mas_vpc
+  classic_access:         "" => "false" (forces new resource)
+  default_network_acl:    "" => "<computed>"
+  default_security_group: "" => "<computed>"
+  is_default:             "" => "false" (forces new resource)
+  name:                   "" => "shallcrm-sydney-vpc"
+  resource_group:         "" => "7abe241cfa3a421e9ae4d086e8660eb9" (forces new resource)
+  status:                 "" => "<computed>"
+CREATE: ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1
+  cidr:        "" => "10.40.0.0/16"
+  has_subnets: "" => "<computed>"
+  name:        "" => "shallcrm-au-syd-1-address-prefix"
+  vpc:         "" => "<computed>" (forces new resource)
+  zone:        "" => "au-syd-1" (forces new resource)
+CREATE: ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2
+  cidr:        "" => "10.50.0.0/16"
+  has_subnets: "" => "<computed>"
+  name:        "" => "shallcrm-au-syd-2-address-prefix"
+  vpc:         "" => "<computed>" (forces new resource)
+  zone:        "" => "au-syd-2" (forces new resource)
+CREATE: ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3
+  cidr:        "" => "10.60.0.0/16"
+  has_subnets: "" => "<computed>"
+  name:        "" => "shallcrm-au-syd-3-address-prefix"
+  vpc:         "" => "<computed>" (forces new resource)
+  zone:        "" => "au-syd-3" (forces new resource)
+ew:false, Sensitive:false, Type:0x0}, "has_subnets":*terraform.ResourceAttrDiff{Old:"", New:"", NewComputed:true, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "id":*terraform.ResourceAttrDiff{Old:"", New:"", NewComputed:true, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x2}, "name":*terraform.ResourceAttrDiff{Old:"", New:"shallcrm-au-syd-2-address-prefix", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:false, Sensitive:false, Type:0x0}, "vpc":*terraform.ResourceAttrDiff{Old:"", New:"${ibm_is_vpc.mas_vpc.id}", NewComputed:true, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}, "zone":*terraform.ResourceAttrDiff{Old:"", New:"au-syd-2", NewComputed:false, NewRemoved:false, NewExtra:interface {}(nil), RequiresNew:true, Sensitive:false, Type:0x0}}, Destroy:false, DestroyDeposed:false, DestroyTainted:false, Meta:map[string]interface {}(nil)}
+2019/08/26 13:11:46 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2
+2019/08/26 13:11:46 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1
+2019/08/26 13:11:46 [DEBUG] Resource state not found for "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3": ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3
+2019/08/26 13:11:46 [DEBUG] Resource state not found for "ibm_is_vpc.mas_vpc": ibm_is_vpc.mas_vpc
+2019/08/26 13:11:46 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodeApplyableResource
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodeApplyableResource
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodeApplyableResource
+ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodeApplyableResource
+2019/08/26 13:11:46 [DEBUG] resource ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 using provider provider.ibm
+2019/08/26 13:11:46 [DEBUG] resource ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 using provider provider.ibm
+2019/08/26 13:11:46 [DEBUG] resource ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 using provider provider.ibm
+2019/08/26 13:11:46 [DEBUG] resource ibm_is_vpc.mas_vpc using provider provider.ibm
+2019/08/26 13:11:46 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1" references: [ibm_is_vpc.mas_vpc ibm_is_vpc.mas_vpc]
+2019/08/26 13:11:46 [DEBUG] ReferenceTransformer: "provider.ibm" references: [var.vpc_resource_group var.sl_username var.sl_api_key var.ic_api_key var.vpc_gen var.vpc_region]
+2019/08/26 13:11:46 [DEBUG] ReferenceTransformer: "var.sl_username" references: []
+2019/08/26 13:11:46 [DEBUG] ReferenceTransformer: "var.sl_api_key" references: []
+2019/08/26 13:11:46 [DEBUG] ReferenceTransformer: "var.vpc_resource_group" references: []
+2019/08/26 13:11:46 [DEBUG] ReferenceTransformer: "var.vpc_gen" references: []
+2019/08/26 13:11:46 [DEBUG] ReferenceTransformer: "var.vpc_vm_image" references: []
+2019/08/26 13:11:46 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3" references: [ibm_is_vpc.mas_vpc ibm_is_vpc.mas_vpc]
+2019/08/26 13:11:46 [DEBUG] ReferenceTransformer: "ibm_is_vpc.mas_vpc" references: [var.vpc_resource_group]
+2019/08/26 13:11:46 [DEBUG] ReferenceTransformer: "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2" references: [ibm_is_vpc.mas_vpc ibm_is_vpc.mas_vpc]
+2019/08/26 13:11:46 [DEBUG] ReferenceTransformer: "var.ic_api_key" references: []
+2019/08/26 13:11:46 [DEBUG] ReferenceTransformer: "var.vpc_region" references: []
+aform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodeApplyableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodeApplyableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodeApplyableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+var.ic_api_key - *terraform.NodeRootVariable
+var.sl_api_key - *terraform.NodeRootVariable
+var.sl_username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+ce
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodeApplyableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodeApplyableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodeApplyableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+var.ic_api_key - *terraform.NodeRootVariable
+var.sl_api_key - *terraform.NodeRootVariable
+var.sl_username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+vpc_address_prefix.mas_vpc_address_prefix_1 - *terraform.NodeApplyableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2 - *terraform.NodeApplyableResource
+  ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3 - *terraform.NodeApplyableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.ibm (close) - *terraform.graphNodeCloseProvider
+var.ic_api_key - *terraform.NodeRootVariable
+var.sl_api_key - *terraform.NodeRootVariable
+var.sl_username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+ble
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+2019/08/26 13:11:46 [DEBUG] Starting graph walk: walkApply
+2019-08-26T13:11:46.973+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 13:11:46 Configuring SoftLayer Session with API key
+2019-08-26T13:11:46.973+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 13:11:46 Configuring IBM Cloud Session with API key
+[0m[1mibm_is_vpc.mas_vpc: Creating...[0m
+  classic_access:         "" => "false"
+  default_network_acl:    "" => "<computed>"
+  default_security_group: "" => "<computed>"
+  is_default:             "" => "false"
+  name:                   "" => "shallcrm-sydney-vpc"
+  resource_group:         "" => "7abe241cfa3a421e9ae4d086e8660eb9"
+  status:                 "" => "<computed>"[0m
+2019-08-26T13:12:01.313+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 13:12:01 [DEBUG] VPC create
+[0m[1mibm_is_vpc.mas_vpc: Still creating... (10s elapsed)[0m[0m
+2019-08-26T13:12:15.571+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 13:12:15 [INFO] VPC : 62fb0e77-e307-4739-8245-95bb79c48fce
+2019-08-26T13:12:18.076+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 13:12:18 [DEBUG] vpc default network acl is not null :6b22df69-55b3-43f7-82cd-f0d363771853
+[0m[1mibm_is_vpc.mas_vpc: Still creating... (20s elapsed)[0m[0m
+2019-08-26T13:12:26.434+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 13:12:26 Authentication failed. Trying token refresh
+[0m[1mibm_is_vpc.mas_vpc: Still creating... (30s elapsed)[0m[0m
+[0m[1mibm_is_vpc.mas_vpc: Still creating... (40s elapsed)[0m[0m
+[0m[1mibm_is_vpc.mas_vpc: Still creating... (50s elapsed)[0m[0m
+[0m[1mibm_is_vpc.mas_vpc: Still creating... (1m0s elapsed)[0m[0m
+[0m[1mibm_is_vpc.mas_vpc: Still creating... (1m10s elapsed)[0m[0m
+[0m[1mibm_is_vpc.mas_vpc: Still creating... (1m20s elapsed)[0m[0m
+2019/08/26 13:13:26 [DEBUG] plugin: waiting for all plugin processes to complete...
+[31m
+[1m[31mError: [0m[0m[1mError applying plan:
+
+1 error occurred:
+	* ibm_is_vpc.mas_vpc: 1 error occurred:
+2019-08-26T13:13:26.470+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 13:13:26 [ERR] plugin: plugin server: accept unix /tmp/plugin094293216: use of closed network connection
+	* ibm_is_vpc.mas_vpc: Error on get of resource vpc (62fb0e77-e307-4739-8245-95bb79c48fce) tags: Authentication failed, Unable to refresh auth token: Post https://iam.cloud.ibm.com/oidc/token: net/http: request canceled (Client.Timeout exceeded while awaiting headers). Try again later
+
+
+
+
+
+Terraform does not automatically rollback in the face of errors.
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m
+
+[0m[0m[0m
+2019-08-26T13:13:26.477+0800 [DEBUG] plugin: plugin process exited: path=/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.17.2

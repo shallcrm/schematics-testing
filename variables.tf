@@ -50,7 +50,8 @@ variable "vpc_gen" {
 
 variable "vpc_resource_group" {
     description = "Target resource group VPC infrastructure resources"
-    default = "7abe241cfa3a421e9ae4d086e8660eb9"     //  IBM CSC East "VPC-Admin" resource group ID - must specify for CSC - not authorised in "default"
+    default = "7abe241cfa3a421e9ae4d086e8660eb9"     //  IBM CSC East "VPC-admin" resource group ID 
+#    default = "4ba0d39f7d0f4ef8805073c281c526e0"     //  IBM CSC East "Default" resource group ID 
 #    default = "23585b74d59848369a37b77f524c007a"     //  Personal default resource group ID
 }  
 

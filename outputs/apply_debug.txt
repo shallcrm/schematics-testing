@@ -1,0 +1,274 @@
+2019/08/26 12:09:28 [INFO] Terraform version: 0.11.14  
+2019/08/26 12:09:28 [INFO] Go runtime version: go1.12.4
+2019/08/26 12:09:28 [INFO] CLI args: []string{"/home/michael/terraform/terraform", "apply"}
+2019/08/26 12:09:28 [DEBUG] Attempting to open CLI config file: /home/michael/.terraformrc
+2019/08/26 12:09:28 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2019/08/26 12:09:28 [INFO] CLI command args: []string{"apply"}
+2019/08/26 12:09:28 [INFO] command: empty terraform config, returning nil
+2019/08/26 12:09:28 [DEBUG] command: no data state file found for backend config
+2019/08/26 12:09:28 [DEBUG] New state was assigned lineage "b7fbf67a-47c7-e17d-c502-7aa5a48bf10c"
+2019/08/26 12:09:28 [INFO] command: backend initialized: <nil>
+2019/08/26 12:09:28 [DEBUG] checking for provider in "."
+2019/08/26 12:09:28 [DEBUG] checking for provider in "/home/michael/terraform"
+2019/08/26 12:09:28 [DEBUG] checking for provider in ".terraform/plugins/linux_amd64"
+2019/08/26 12:09:28 [DEBUG] checking for provider in "/home/michael/.terraform.d/plugins"
+2019/08/26 12:09:28 [DEBUG] found provider "terraform-provider-ibm_v0.14.1"
+2019/08/26 12:09:28 [DEBUG] found provider "terraform-provider-ibm_v0.15.0"
+2019/08/26 12:09:28 [DEBUG] found provider "terraform-provider-ibm_v0.15.1"
+2019/08/26 12:09:28 [DEBUG] found provider "terraform-provider-ibm_v0.16.0"
+2019/08/26 12:09:28 [DEBUG] found provider "terraform-provider-ibm_v0.17.0"
+2019/08/26 12:09:28 [DEBUG] found provider "terraform-provider-ibm_v0.17.1"
+2019/08/26 12:09:28 [DEBUG] found provider "terraform-provider-ibm_v0.17.2"
+2019/08/26 12:09:28 [DEBUG] found valid plugin: "ibm", "0.17.1", "/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.17.1"
+2019/08/26 12:09:28 [DEBUG] found valid plugin: "ibm", "0.17.2", "/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.17.2"
+2019/08/26 12:09:28 [DEBUG] found valid plugin: "ibm", "0.14.1", "/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.14.1"
+2019/08/26 12:09:28 [DEBUG] found valid plugin: "ibm", "0.15.0", "/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.15.0"
+2019/08/26 12:09:28 [DEBUG] found valid plugin: "ibm", "0.15.1", "/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.15.1"
+2019/08/26 12:09:28 [DEBUG] found valid plugin: "ibm", "0.16.0", "/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.16.0"
+2019/08/26 12:09:28 [DEBUG] found valid plugin: "ibm", "0.17.0", "/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.17.0"
+2019/08/26 12:09:28 [DEBUG] checking for provisioner in "."
+2019/08/26 12:09:28 [DEBUG] checking for provisioner in "/home/michael/terraform"
+2019/08/26 12:09:28 [DEBUG] checking for provisioner in ".terraform/plugins/linux_amd64"
+2019/08/26 12:09:28 [DEBUG] checking for provisioner in "/home/michael/.terraform.d/plugins"
+2019/08/26 12:09:28 [INFO] command: backend <nil> is not enhanced, wrapping in local
+2019/08/26 12:09:28 [INFO] backend/local: starting Apply operation
+2019/08/26 12:09:28 [INFO] terraform: building graph: GraphTypeInput
+2019/08/26 12:09:28 [DEBUG] Attaching resource state to "ibm_is_vpc.mas_vpc": &terraform.ResourceState{Type:"ibm_is_vpc", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc0000b9630), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/08/26 12:09:28 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodeAbstractResource
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "provider.ibm" references: [var.sl_username var.sl_api_key var.ic_api_key var.vpc_gen var.vpc_region var.vpc_resource_group]
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "ibm_is_vpc.mas_vpc" references: [var.vpc_resource_group]
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.sl_api_key" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.vpc_region" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.vpc_gen" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.sl_username" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.ic_api_key" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.vpc_resource_group" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.vpc_vm_image" references: []
+- *terraform.NodeRootVariable
+var.sl_api_key - *terraform.NodeRootVariable
+var.sl_username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+2019-08-26T12:09:28.670+0800 [DEBUG] plugin: starting plugin: path=/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.17.2 args=[/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.17.2]
+2019-08-26T12:09:28.677+0800 [DEBUG] plugin: waiting for RPC address: path=/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.17.2
+2019-08-26T12:09:28.736+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 12:09:28 IBM Cloud Provider version 0.17.2
+2019-08-26T12:09:28.740+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: plugin address: timestamp=2019-08-26T12:09:28.740+0800 address=/tmp/plugin066499146 network=unix
+2019/08/26 12:09:28 [INFO] terraform: building graph: GraphTypeValidate
+2019/08/26 12:09:28 [DEBUG] Attaching resource state to "ibm_is_vpc.mas_vpc": &terraform.ResourceState{Type:"ibm_is_vpc", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc0000b9630), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/08/26 12:09:28 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodeValidatableResource
+2019/08/26 12:09:28 [DEBUG] resource ibm_is_vpc.mas_vpc using provider provider.ibm
+r.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.vpc_vm_image" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "provider.ibm" references: [var.vpc_resource_group var.sl_username var.sl_api_key var.ic_api_key var.vpc_gen var.vpc_region]
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "ibm_is_vpc.mas_vpc" references: [var.vpc_resource_group]
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.sl_username" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.sl_api_key" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.ic_api_key" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.vpc_region" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.vpc_gen" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.vpc_resource_group" references: []
+2019/08/26 12:09:28 [DEBUG] Attaching resource state to "ibm_is_vpc.mas_vpc": &terraform.ResourceState{Type:"ibm_is_vpc", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc0000b9630), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/08/26 12:09:28 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodeValidatableResourceInstance
+2019/08/26 12:09:28 [INFO] backend/local: apply calling Refresh
+2019/08/26 12:09:28 [INFO] terraform: building graph: GraphTypeRefresh
+2019/08/26 12:09:28 [DEBUG] Attaching resource state to "ibm_is_vpc.mas_vpc": &terraform.ResourceState{Type:"ibm_is_vpc", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc0000b9b80), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/08/26 12:09:28 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodeRefreshableManagedResource
+2019/08/26 12:09:28 [TRACE] AttachResourceConfigTransformer: Beginning...
+2019/08/26 12:09:28 [TRACE] AttachResourceConfigTransformer: Attach resource config request: ibm_is_vpc.mas_vpc
+2019/08/26 12:09:28 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"mas_vpc", Type:"ibm_is_vpc", RawCount:(*config.RawConfig)(0xc0003b8770), RawConfig:(*config.RawConfig)(0xc0003b8690), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/08/26 12:09:28 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodeRefreshableManagedResource
+2019/08/26 12:09:28 [DEBUG] resource ibm_is_vpc.mas_vpc using provider provider.ibm
+erraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.ic_api_key" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.vpc_region" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.vpc_gen" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "provider.ibm" references: [var.sl_username var.sl_api_key var.ic_api_key var.vpc_gen var.vpc_region var.vpc_resource_group]
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "ibm_is_vpc.mas_vpc" references: [var.vpc_resource_group]
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.sl_username" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.sl_api_key" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.vpc_resource_group" references: []
+2019/08/26 12:09:28 [DEBUG] ReferenceTransformer: "var.vpc_vm_image" references: []
+2019/08/26 12:09:28 [DEBUG] Starting graph walk: walkRefresh
+2019-08-26T12:09:28.778+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 12:09:28 Configuring SoftLayer Session with API key
+2019-08-26T12:09:28.778+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 12:09:28 Configuring IBM Cloud Session with API key
+2019/08/26 12:09:36 [DEBUG] Attaching resource state to "ibm_is_vpc.mas_vpc": &terraform.ResourceState{Type:"ibm_is_vpc", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc0000b9b80), Deposed:[]*terraform.InstanceState{}, Provider:"provider.ibm", mu:sync.Mutex{state:0, sema:0x0}}
+2019/08/26 12:09:36 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodeRefreshableManagedResourceInstance
+2019/08/26 12:09:36 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodeRefreshableManagedResourceInstance
+2019/08/26 12:09:36 [DEBUG] ReferenceTransformer: "ibm_is_vpc.mas_vpc" references: []
+2019/08/26 12:09:36 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodeRefreshableManagedResourceInstance
+2019/08/26 12:09:36 [TRACE] Graph after step *terraform.RootTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodeRefreshableManagedResourceInstance
+2019/08/26 12:09:36 [TRACE] dag/walk: added new vertex: "ibm_is_vpc.mas_vpc"
+[0m[1mibm_is_vpc.mas_vpc: Refreshing state... (ID: 9d0923c5-5c6b-455a-9eb0-5f941fa81532)[0m
+2019/08/26 12:09:37 [INFO] terraform: building graph: GraphTypePlan
+2019/08/26 12:09:37 [DEBUG] Resource state not found for "ibm_is_vpc.mas_vpc": ibm_is_vpc.mas_vpc
+2019/08/26 12:09:37 [DEBUG] resource ibm_is_vpc.mas_vpc using provider provider.ibm
+2019/08/26 12:09:37 [DEBUG] ReferenceTransformer: "ibm_is_vpc.mas_vpc" references: [var.vpc_resource_group]
+2019/08/26 12:09:37 [DEBUG] ReferenceTransformer: "var.vpc_gen" references: []
+2019/08/26 12:09:37 [DEBUG] ReferenceTransformer: "var.vpc_vm_image" references: []
+2019/08/26 12:09:37 [DEBUG] ReferenceTransformer: "provider.ibm" references: [var.vpc_resource_group var.sl_username var.sl_api_key var.ic_api_key var.vpc_gen var.vpc_region]
+2019/08/26 12:09:37 [DEBUG] ReferenceTransformer: "var.sl_username" references: []
+2019/08/26 12:09:37 [DEBUG] ReferenceTransformer: "var.sl_api_key" references: []
+2019/08/26 12:09:37 [DEBUG] ReferenceTransformer: "var.ic_api_key" references: []
+2019/08/26 12:09:37 [DEBUG] ReferenceTransformer: "var.vpc_region" references: []
+2019/08/26 12:09:37 [DEBUG] ReferenceTransformer: "var.vpc_resource_group" references: []
+m.NodeRootVariable
+  var.vpc_resource_group - *terraform.NodeRootVariable
+  var.vpc_vm_image - *terraform.NodeRootVariable
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ic_api_key - *terraform.NodeRootVariable
+  var.sl_api_key - *terraform.NodeRootVariable
+  var.sl_username - *terraform.NodeRootVariable
+  var.vpc_gen - *terraform.NodeRootVariable
+  var.vpc_region - *terraform.NodeRootVariable
+  var.vpc_resource_group - *terraform.NodeRootVariable
+var.ic_api_key - *terraform.NodeRootVariable
+var.sl_api_key - *terraform.NodeRootVariable
+var.sl_username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+2019-08-26T12:09:37.306+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 12:09:37 Configuring SoftLayer Session with API key
+2019-08-26T12:09:37.306+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 12:09:37 Configuring IBM Cloud Session with API key
+2019/08/26 12:09:41 [DEBUG] Resource state not found for "ibm_is_vpc.mas_vpc": ibm_is_vpc.mas_vpc
+2019/08/26 12:09:41 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodePlannableResourceInstance
+2019/08/26 12:09:41 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodePlannableResourceInstance
+2019/08/26 12:09:41 [DEBUG] ReferenceTransformer: "ibm_is_vpc.mas_vpc" references: []
+2019/08/26 12:09:41 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodePlannableResourceInstance
+
+2019/08/26 12:09:41 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  [32m+[0m create
+[0m
+Terraform will perform the following actions:
+
+[32m  [32m+[0m [32mibm_is_vpc.mas_vpc
+[0m      id:                     <computed>
+      classic_access:         "false"
+      default_network_acl:    <computed>
+      default_security_group: <computed>
+      is_default:             "false"
+      name:                   "shallcrm-sydney-vpc"
+      resource_group:         "7abe241cfa3a421e9ae4d086e8660eb9"
+      status:                 <computed>
+[0m
+[0m
+[0m[1mPlan:[0m 1 to add, 0 to change, 0 to destroy.[0m
+
+[0m[1mDo you want to perform these actions?[0m
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  [1mEnter a value:[0m [0m
+2019/08/26 12:09:53 [INFO] terraform: building graph: GraphTypeApply
+2019/08/26 12:09:53 [DEBUG] Resource state not found for "ibm_is_vpc.mas_vpc": ibm_is_vpc.mas_vpc
+2019/08/26 12:09:53 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+ibm_is_vpc.mas_vpc - *terraform.NodeApplyableResource
+2019/08/26 12:09:53 [TRACE] ProviderConfigTransformer: Starting for path: []
+2019/08/26 12:09:53 [TRACE] Attach provider request: []string{} ibm
+2019/08/26 12:09:53 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"ibm", Alias:"", Version:">= 0.17.1", RawConfig:(*config.RawConfig)(0xc0003b87e0)}
+2019/08/26 12:09:53 [DEBUG] resource ibm_is_vpc.mas_vpc using provider provider.ibm
+2019/08/26 12:09:53 [DEBUG] ReferenceTransformer: "ibm_is_vpc.mas_vpc" references: [var.vpc_resource_group]
+2019/08/26 12:09:53 [DEBUG] ReferenceTransformer: "provider.ibm" references: [var.sl_username var.sl_api_key var.ic_api_key var.vpc_gen var.vpc_region var.vpc_resource_group]
+2019/08/26 12:09:53 [DEBUG] ReferenceTransformer: "var.sl_username" references: []
+2019/08/26 12:09:53 [DEBUG] ReferenceTransformer: "var.vpc_region" references: []
+2019/08/26 12:09:53 [DEBUG] ReferenceTransformer: "var.vpc_resource_group" references: []
+2019/08/26 12:09:53 [DEBUG] ReferenceTransformer: "var.vpc_vm_image" references: []
+2019/08/26 12:09:53 [DEBUG] ReferenceTransformer: "var.sl_api_key" references: []
+2019/08/26 12:09:53 [DEBUG] ReferenceTransformer: "var.ic_api_key" references: []
+2019/08/26 12:09:53 [DEBUG] ReferenceTransformer: "var.vpc_gen" references: []
+able
+  var.sl_api_key - *terraform.NodeRootVariable
+  var.sl_username - *terraform.NodeRootVariable
+  var.vpc_gen - *terraform.NodeRootVariable
+  var.vpc_region - *terraform.NodeRootVariable
+  var.vpc_resource_group - *terraform.NodeRootVariable
+  var.vpc_vm_image - *terraform.NodeRootVariable
+provider.ibm - *terraform.NodeApplyableProvider
+  var.ic_api_key - *terraform.NodeRootVariable
+  var.sl_api_key - *terraform.NodeRootVariable
+  var.sl_username - *terraform.NodeRootVariable
+  var.vpc_gen - *terraform.NodeRootVariable
+  var.vpc_region - *terraform.NodeRootVariable
+  var.vpc_resource_group - *terraform.NodeRootVariable
+provider.ibm (close) - *terraform.graphNodeCloseProvider
+  ibm_is_vpc.mas_vpc - *terraform.NodeApplyableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+var.ic_api_key - *terraform.NodeRootVariable
+var.sl_api_key - *terraform.NodeRootVariable
+var.sl_username - *terraform.NodeRootVariable
+var.vpc_gen - *terraform.NodeRootVariable
+var.vpc_region - *terraform.NodeRootVariable
+var.vpc_resource_group - *terraform.NodeRootVariable
+var.vpc_vm_image - *terraform.NodeRootVariable
+2019-08-26T12:09:53.186+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 12:09:53 Configuring SoftLayer Session with API key
+2019-08-26T12:09:53.186+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 12:09:53 Configuring IBM Cloud Session with API key
+[0m[1mibm_is_vpc.mas_vpc: Creating...[0m
+  classic_access:         "" => "false"
+  default_network_acl:    "" => "<computed>"
+  default_security_group: "" => "<computed>"
+  is_default:             "" => "false"
+  name:                   "" => "shallcrm-sydney-vpc"
+  resource_group:         "" => "7abe241cfa3a421e9ae4d086e8660eb9"
+  status:                 "" => "<computed>"[0m
+[0m[1mibm_is_vpc.mas_vpc: Still creating... (10s elapsed)[0m[0m
+2019-08-26T12:10:13.991+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 12:10:13 [INFO] VPC : adec69ef-b561-44c9-bf7d-52476279b04e
+2019-08-26T12:10:16.454+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 12:10:16 [DEBUG] vpc default network acl is not null :a63c095e-19cc-488f-976a-c6942231d60b
+[0m[1mibm_is_vpc.mas_vpc: Still creating... (20s elapsed)[0m[0m
+2019-08-26T12:10:19.167+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 12:10:19 Authentication failed. Trying token refresh
+[31m
+2019/08/26 12:10:20 [DEBUG] plugin: waiting for all plugin processes to complete...
+[1m[31mError: [0m[0m[1mError applying plan:
+
+1 error occurred:
+	* ibm_is_vpc.mas_vpc: 1 error occurred:
+2019-08-26T12:10:20.407+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 12:10:20 [ERR] plugin: stream copy 'stderr' error: stream closed
+	* ibm_is_vpc.mas_vpc: Error on get of resource vpc (adec69ef-b561-44c9-bf7d-52476279b04e) tags: Request failed with status code: 401, ServerErrorResponse: {"errors":[{"code":"GST605E","response":"INVALID_PERMISSIONS","message":"The provided auth token does not have permissions to perform the request","level":"error","httpCode":401,"more_info":""}]}
+
+
+
+
+
+Terraform does not automatically rollback in the face of errors.
+2019-08-26T12:10:20.409+0800 [DEBUG] plugin.terraform-provider-ibm_v0.17.2: 2019/08/26 12:10:20 [ERR] plugin: plugin server: accept unix /tmp/plugin066499146: use of closed network connection
+Instead, your Terraform state file has been partially updated with
+any resources that successfully completed. Please address the error
+above and apply again to incrementally change your infrastructure.[0m
+
+[0m[0m[0m
+2019-08-26T12:10:20.415+0800 [DEBUG] plugin: plugin process exited: path=/home/michael/.terraform.d/plugins/terraform-provider-ibm_v0.17.2
