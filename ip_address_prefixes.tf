@@ -25,3 +25,12 @@ resource "ibm_is_vpc_address_prefix" "mas_vpc_address_prefix_3" {
     vpc                   = "${ibm_is_vpc.mas_vpc.id}"                 //  VPC for which we are defining the address prefix
     cidr                  = "10.60.0.0/16"                             //  IP address range prefix for this zone in this VPC
 }
+
+resource "null_resource" "address_prefix_wait" {
+    depends_on            = ["ibm_is_vpc_address_prefix.mas_vpc_address_prefix_1",
+                             "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_2",
+                             "ibm_is_vpc_address_prefix.mas_vpc_address_prefix_3"]
+    provisioner "local-exec" {
+        command           = "sleep 2"
+    }
+} 
